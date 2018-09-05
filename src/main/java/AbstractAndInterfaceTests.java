@@ -1,7 +1,10 @@
+import fruit.Fruit;
 import animal.Animal;
 import animal.Chicken;
 import animal.Tiger;
 import edible.Edible;
+import fruit.Apple;
+import fruit.Orange;
 
 public class AbstractAndInterfaceTests {
     public static void main(String[] args) {
@@ -14,6 +17,13 @@ public class AbstractAndInterfaceTests {
                 Edible edible = (Chicken) animal;
                 System.out.println(edible.howToEat());
             }
+        }
+
+        Fruit[] fruits = new Fruit[2];
+        fruits[0] = new Apple();
+        fruits[1] = new Orange();
+        for (Fruit fruit : fruits) {
+            System.out.println(fruit.howToEat());
         }
     }
 }
